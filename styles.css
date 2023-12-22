@@ -1,0 +1,572 @@
+:root {
+    --course-explorer-card-x-padding: 12px;
+    --course-explorer-card-y-padding: 8px;
+    --card-height: 440px;
+    --ceb-main-color: #e3000b;
+    --image-height: 130px;
+}
+
+.ceb-main-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 24px 0;
+}
+
+.ceb-main-wrapper header {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.ceb-search {
+    position: relative;
+}
+
+.ceb-search .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ceb-pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    font-weight: bold;
+}
+
+#cebTopPaginationContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ceb-pagination-container.bottom {
+    justify-content: center;
+    margin-top: 50px !important;
+    margin-bottom: 24px !important;
+}
+
+.ceb-pagination-numbers {
+    display: flex;
+    gap: 4px;
+}
+
+.ceb-pagination {
+    padding:
+        var(--course-explorer-card-y-padding)
+        var(--course-explorer-card-x-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ceb_res_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.card.course-card {
+    border-radius: 0;
+}
+.course-card {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s ease;
+}
+.course-card:hover {
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.4s ease;
+}
+.course-card__image img {
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+.course-card:hover .course-card__image img {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+.course-card__info {
+    display: flex;
+    justify-content: space-between;
+    padding:
+        var(--course-explorer-card-y-padding)
+        var(--course-explorer-card-x-padding);
+    font-size: 14px;
+}
+
+.course-card__info .icon-image {
+    width: 18px;
+    height: 18px;
+}
+
+.course-card__info-items {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.course-card__info-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.course-card__info-country img {
+    max-width: 25px;
+    object-fit: cover;
+}
+
+.course-card__label.mc-original {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    background-color: #ebff03;
+    padding: 4px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    z-index: 2;
+}
+.course-card__label.favourite {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px;
+    z-index: 2;
+}
+.course-card__label.favourite img {
+    width: 22px;
+    filter: brightness(100);
+}
+
+.course-card__image {
+    position: relative;
+}
+.card-front .caption {
+    text-align: left;
+    font-size: 13px;
+    line-height: 20px;
+    color: #6d7379;
+    padding: 0 var(--course-explorer-card-x-padding);
+}
+
+.course-card__image img {
+    width: 100%;
+    height: var(--image-height);
+    object-fit: cover;
+}
+
+.course-card__content {
+    padding:
+        var(--course-explorer-card-y-padding)
+        var(--course-explorer-card-x-padding);
+    padding-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: calc(100% - var(--image-height));
+}
+
+.course-card__description {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.course-card__content h3 {
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.course-card__content .course-card__quick-facts {
+    margin-top: 8px;
+    width: 100%;
+    column-gap: 8px;
+}
+.course-card__content .course-card__quick-facts .fa-star {
+    margin-right: 2px;
+}
+.course-card__content .course-card__quick-facts i {
+    font-size: 0.8rem;
+}
+.course-card__description {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 1.5rem;
+}
+.course-card__tags {
+    margin-top: auto;
+    column-gap: 8px;
+}
+.course-card__tags i {
+    font-size: 1.3rem;
+}
+
+.course-card__actions {
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ceb-filter-dropdown-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "categories types venues"
+        "subcategories languages countries";
+    gap: 0.5rem 1rem;
+    margin: 12px 0;
+}
+
+.ceb-dropdown-categories {
+    grid-area: categories;
+}
+.ceb-dropdown-subcategory {
+    grid-area: subcategories;
+}
+.ceb-dropdown-types {
+    grid-area: types;
+}
+.ceb-dropdown-languages {
+    grid-area: languages;
+}
+.ceb-dropdown-venues {
+    grid-area: venues;
+}
+.ceb-dropdown-countries {
+    grid-area: countries;
+    display: none;
+}
+
+.ceb-filter-dropdown-container .dropdown-container,
+.ceb-sort-container .dropdown-container {
+    position: relative;
+}
+
+.ceb-filter-dropdown-container .dropdown-container .text-container,
+.ceb-sort-container .dropdown-container .text-container {
+    width: 95%;
+    display: inline-block;
+    text-align: left;
+}
+
+.ceb-filter-dropdown-container .dropdown-container .dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-container .reset-dropdown {
+    position: absolute;
+    right: 35px;
+    top: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-container .dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-container .reset-dropdown i {
+    line-height: 14px;
+}
+
+.ceb-sort-container .dropdown-container {
+    min-width: 220px;
+}
+
+.ceb-sort-container .dropdown-container .text {
+    overflow: hidden;
+    max-width: 78%;
+    text-overflow: ellipsis;
+}
+
+.ceb-loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ceb-loading-container .spinner {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    margin-left: 50%;
+    margin-right: 50%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ceb-loading-container .spinner div {
+    width: 10%;
+    height: 16%;
+    background: var(--primary);
+    position: absolute;
+    left: 49%;
+    top: 43%;
+    opacity: 0;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-animation: fade 1s linear infinite;
+    animation: fade 1s linear infinite;
+}
+
+.ceb-loading-container .spinner .bar1 {
+    transform: rotate(0deg) translate(0, -130%);
+    animation-delay: 0s;
+    -webkit-transform: rotate(0deg) translate(0, -130%);
+    -webkit-animation-delay: 0s;
+}
+
+.ceb-loading-container .spinner .bar2 {
+    transform: rotate(30deg) translate(0, -130%);
+    animation-delay: -0.9167s;
+    -webkit-transform: rotate(30deg) translate(0, -130%);
+    -webkit-animation-delay: -0.9167s;
+}
+
+.ceb-loading-container .spinner .bar3 {
+    transform: rotate(60deg) translate(0, -130%);
+    animation-delay: -0.833s;
+    -webkit-transform: rotate(60deg) translate(0, -130%);
+    -webkit-animation-delay: -0.833s;
+}
+
+.ceb-loading-container .spinner .bar4 {
+    transform: rotate(90deg) translate(0, -130%);
+    animation-delay: -0.7497s;
+    -webkit-transform: rotate(90deg) translate(0, -130%);
+    -webkit-animation-delay: -0.7497s;
+}
+
+.ceb-loading-container .spinner .bar5 {
+    transform: rotate(120deg) translate(0, -130%);
+    animation-delay: -0.667s;
+    -webkit-transform: rotate(120deg) translate(0, -130%);
+    -webkit-animation-delay: -0.667s;
+}
+
+.ceb-loading-container .spinner .bar6 {
+    transform: rotate(150deg) translate(0, -130%);
+    animation-delay: -0.5837s;
+    -webkit-transform: rotate(150deg) translate(0, -130%);
+    -webkit-animation-delay: -0.5837s;
+}
+
+.ceb-loading-container .spinner .bar7 {
+    transform: rotate(180deg) translate(0, -130%);
+    animation-delay: -0.5s;
+    -webkit-transform: rotate(180deg) translate(0, -130%);
+    -webkit-animation-delay: -0.5s;
+}
+
+.ceb-loading-container .spinner .bar8 {
+    transform: rotate(210deg) translate(0, -130%);
+    animation-delay: -0.4167s;
+    -webkit-transform: rotate(210deg) translate(0, -130%);
+    -webkit-animation-delay: -0.4167s;
+}
+
+.ceb-loading-container .spinner .bar9 {
+    transform: rotate(240deg) translate(0, -130%);
+    animation-delay: -0.333s;
+    -webkit-transform: rotate(240deg) translate(0, -130%);
+    -webkit-animation-delay: -0.333s;
+}
+
+.ceb-loading-container .spinner .bar10 {
+    transform: rotate(270deg) translate(0, -130%);
+    animation-delay: -0.2497s;
+    -webkit-transform: rotate(270deg) translate(0, -130%);
+    -webkit-animation-delay: -0.2497s;
+}
+
+.ceb-loading-container .spinner .bar11 {
+    transform: rotate(300deg) translate(0, -130%);
+    animation-delay: -0.167s;
+    -webkit-transform: rotate(300deg) translate(0, -130%);
+    -webkit-animation-delay: -0.167s;
+}
+
+.ceb-loading-container .spinner .bar12 {
+    transform: rotate(330deg) translate(0, -130%);
+    animation-delay: -0.0833s;
+    -webkit-transform: rotate(330deg) translate(0, -130%);
+    -webkit-animation-delay: -0.0833s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.25;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.25;
+    }
+}
+
+.ribbon-wrapper {
+    width: 108px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ribbon-wrapper .ribbon {
+    font: bold 15px sans-serif;
+    color: #fff;
+    text-align: center;
+    -webkit-transform: rotate(-37deg);
+    -moz-transform: rotate(-37deg);
+    -ms-transform: rotate(-37deg);
+    -o-transform: rotate(-37deg);
+    position: relative;
+    padding: 7px 0;
+    top: 15px;
+    left: -30px;
+    width: 145px;
+    background-color: var(--primary);
+}
+
+.course-card__action-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.course-card__action-button .text {
+    font-size: 13px;
+}
+
+.course-card__action-button i {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+}
+
+.course-card__action-button.primary i {
+    background-color: var(--primary);
+}
+
+.course-card__action-button.secondary i {
+    background-color: #f8f9fa;
+}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: var(--card-height);
+    text-align: center;
+    -webkit-transition: -webkit-transform 800ms ease-in-out;
+    transition: -webkit-transform 800ms ease-in-out;
+    transition: transform 800ms ease-in-out;
+    transition: transform 800ms ease-in-out, -webkit-transform 800ms ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.course-card-transform {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card-front {
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: var(--card-height);
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    text-align: left;
+}
+
+.card-front .course-card__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.card-front .course-card__progress .course-card__progress-bar {
+    height: 100%;
+    background-color: #e4000d;
+}
+
+@media screen and (max-width: 768px) {
+    .ceb-filter-dropdown-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "categories"
+            "subcategories" "types" "languages"
+            "venues" "countries";
+    }
+
+    .ceb-pagination-container {
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+    }
+    .ceb-pagination-container.top {
+        margin-bottom: 20px;
+    }
+    .ceb-pagination-container.bottom {
+        margin-top: 20px !important;
+    }
+    #cebSortContainer {
+        width: 100% !important;
+    }
+    #cebTopPaginationContainer {
+        width: 100%;
+        position: static;
+        left: 0;
+        transform: none;
+    }
+    #cebBottomPaginationContainer {
+        width: 100% !important;
+    }
+    #cebTopPaginationContainer .pagination,
+    #cebBottomPaginationContainer .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
