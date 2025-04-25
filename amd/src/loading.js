@@ -1,6 +1,6 @@
-import { SELECTORS } from "./static-selectors";
+import { getElement, SELECTORS } from "./static-selectors";
 const show = (parent = null) => {
-  const mainWrapper = parent || document.getElementById(SELECTORS.MAIN_WRAPPER);
+  const mainWrapper = parent || getElement(SELECTORS.MAIN_WRAPPER);
   hide();
   _blur();
   const loadingContainer = _create();
@@ -8,12 +8,12 @@ const show = (parent = null) => {
 };
 
 const _blur = () => {
-  const container = document.getElementById(SELECTORS.MAIN_CONTAINER);
+  const container = getElement(SELECTORS.MAIN_CONTAINER);
   container.style.filter = "blur(4px)";
 };
 
 const _unblur = () => {
-  const container = document.getElementById(SELECTORS.MAIN_CONTAINER);
+  const container = getElement(SELECTORS.MAIN_CONTAINER);
   container.style.filter = "none";
 };
 
@@ -40,9 +40,9 @@ const _create = () => {
 };
 
 const hide = (parent = null) => {
-  const mainWrapper = parent || document.getElementById(SELECTORS.MAIN_WRAPPER);
+  const mainWrapper = parent || getElement(SELECTORS.MAIN_WRAPPER);
   _unblur(mainWrapper);
-  document.querySelector(`#${SELECTORS.LOADING_CONTAINER}`)?.remove();
+  getElement(SELECTORS.LOADING_CONTAINER)?.remove();
 };
 
 export default {

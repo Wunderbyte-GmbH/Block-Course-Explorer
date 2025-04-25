@@ -5,7 +5,6 @@ import {setWsToken} from "./token";
 import {getCourseDetailsById, getCourses} from "./api";
 import {courseCardTemplate} from "./templates";
 import * as loading from "./loading";
-import { setInstanceId } from "./static-selectors";
 import {
   FIELD_FILTER_MAP,
   FILTER_TYPES,
@@ -19,7 +18,9 @@ import {
   updateCourseCount,
   getFilterState,
   prepareSortDropdown,
-  getFiltersFromTargets
+  getFiltersFromTargets,
+  getElement,
+  setInstanceId
 } from "./static-selectors";
 import {createPagination} from "./pagination";
 
@@ -83,7 +84,7 @@ const handleFilter = () => {
 
 const initiatePagination = ({ currentPage, total, perPage }) => {
   createPagination({
-    container: document.getElementById("cebTopPaginationContainer"),
+    container: getElement("cebTopPaginationContainer"),
     currentPage,
     total,
     perPage,
@@ -95,7 +96,7 @@ const initiatePagination = ({ currentPage, total, perPage }) => {
   });
 
   createPagination({
-    container: document.getElementById("cebBottomPaginationContainer"),
+    container: getElement("cebBottomPaginationContainer"),
     currentPage,
     total,
     perPage,

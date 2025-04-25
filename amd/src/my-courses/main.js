@@ -6,7 +6,7 @@ import {setWsToken} from "../token";
 import {getMyCourses} from "../api";
 import {courseCardTemplate} from "./templates";
 import * as loading from "../loading";
-import { setInstanceId } from "../static-selectors";
+import { getElement, setInstanceId } from "../static-selectors";
 import {
   FILTER_TYPES,
   updateFilterState,
@@ -63,7 +63,7 @@ const handleFilter = () => {
 
 const initiatePagination = ({currentPage, total, perPage}) => {
   createPagination({
-    container: document.getElementById("cebTopPaginationContainer"),
+    container: getElement("cebTopPaginationContainer"),
     currentPage,
     total,
     perPage,
@@ -75,7 +75,7 @@ const initiatePagination = ({currentPage, total, perPage}) => {
   });
 
   createPagination({
-    container: document.getElementById("cebBottomPaginationContainer"),
+    container: getElement("cebBottomPaginationContainer"),
     currentPage,
     total,
     perPage,
