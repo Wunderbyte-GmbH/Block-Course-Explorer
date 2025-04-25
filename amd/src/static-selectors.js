@@ -115,6 +115,7 @@ export const getElement = (selector) => {
     console.warn("No instance root set. Call setInstanceId(id) first.");
     return null;
   }
+  console.log(instanceRoot);
   return instanceRoot.querySelector(`#${selector}`);
 };
 
