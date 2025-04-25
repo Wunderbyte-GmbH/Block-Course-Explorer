@@ -34,7 +34,7 @@ export const init = ({wsToken, userid, instanceId}) => {
 
     const handleFilter = () => {
       const filterStates = getFilterState();
-      let filteredCourses = [...courses];
+      let filteredCourses = courses.filter(course => course.ismaterial === false);
 
       if (filterStates[FILTER_TYPES.QUERY]) {
         const search = filterStates[FILTER_TYPES.QUERY].toLowerCase();
