@@ -6,6 +6,7 @@ import {setWsToken} from "../token";
 import {getMyCourses} from "../api";
 import {courseCardTemplate} from "./templates";
 import * as loading from "../loading";
+import { setInstanceId } from "../static-selectors";
 import {
   FILTER_TYPES,
   updateFilterState,
@@ -86,7 +87,8 @@ const initiatePagination = ({currentPage, total, perPage}) => {
   });
 };
 
-export const init = ({wsToken, userid}) => {
+export const init = ({wsToken, userid, instanceId}) => {
+  setInstanceId(instanceId);
   setWsToken(wsToken);
   loading.show();
   getMyCourses(

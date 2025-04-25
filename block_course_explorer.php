@@ -13,6 +13,10 @@ class block_course_explorer extends block_base
         return true;
     }
 
+    function instance_allow_multiple() {
+        return true;
+    }
+
     private array $resources = [];
 
     /**
@@ -20,12 +24,14 @@ class block_course_explorer extends block_base
      */
     private function _set_resources() {
         global $USER;
-//        $component = 'block_course_explorer';
-//        $this->resources['translations'] = get_string_manager()->load_component_strings($component, current_language());
+//$component = 'block_course_explorer';
+//$this->resources['translations'] = get_string_manager()->load_component_strings($component, current_language());
         $this->resources['wsToken'] = get_config('block_course_explorer', 'ws_token');
         $categoryids = $this->config->category_ids ?? '';
         $this->resources['categoryids'] = $categoryids;
         $this->resources['userid'] = $USER->id;
+        $this->resources['instanceId'] = uniqid();
+        $this->resources['template']['instanceId'] = $this->resources['instanceId'];
     }
 
 
@@ -46,10 +52,10 @@ class block_course_explorer extends block_base
         $mycourses = $this->config->mycourses ?? 0;
         if ($mycourses) {
             $this->page->requires->js_call_amd('block_course_explorer/my-courses/main', 'init', [$this->resources]);
-            $this->content->text = $OUTPUT->render_from_template('block_course_explorer/my-courses', null);
+            $this->content->text = $OUTPUT->render_from_template('block_course_explorer/my-courses', $this->resources['template']);
         } else {
             $this->page->requires->js_call_amd('block_course_explorer/main', 'init', [$this->resources]);
-            $this->content->text = $OUTPUT->render_from_template('block_course_explorer/explorer', null);
+            $this->content->text = $OUTPUT->render_from_template('block_course_explorer/explorer', $this->resources['template']);
         }
 
         if (get_config('block_course_explorer', 'preset_mintcampus')) {

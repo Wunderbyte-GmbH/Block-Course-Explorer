@@ -2,6 +2,12 @@ import {dropDownTemplate} from "./templates";
 import {get_string as getString} from 'core/str';
 
 let dropDownData = null;
+let instanceRoot = "";
+
+export const setInstanceId = (id) => {
+  instanceRoot = document.getElementById('id-' + id);
+};
+
 
 export const FILTER_TYPES = {
   QUERY: "QUERY",
@@ -105,7 +111,11 @@ const resetFilterStateByType = (type) => {
 };
 
 export const getElement = (selector) => {
-  return document.getElementById(selector);
+  if (!instanceRoot) {
+    console.warn("No instance root set. Call setInstanceId(id) first.");
+    return null;
+  }
+  return instanceRoot.querySelector(`#${selector}`);
 };
 
 export const initDropDownData = (data) => {

@@ -5,6 +5,7 @@ import {setWsToken} from "./token";
 import {getCourseDetailsById, getCourses} from "./api";
 import {courseCardTemplate} from "./templates";
 import * as loading from "./loading";
+import { setInstanceId } from "./static-selectors";
 import {
   FIELD_FILTER_MAP,
   FILTER_TYPES,
@@ -106,8 +107,10 @@ const initiatePagination = ({ currentPage, total, perPage }) => {
   });
 };
 
-export const init = ({wsToken, categoryids, userid}) => {
+export const init = ({wsToken, categoryids, userid, instanceId}) => {
   setWsToken(wsToken);
+  console.log(instanceId);
+  setInstanceId(instanceId);
   loading.show();
   getCourses(
       categoryids,
