@@ -63,7 +63,7 @@ const handleFilter = () => {
 
 const initiatePagination = ({currentPage, total, perPage}) => {
   createPagination({
-    container: getElement("cebTopPaginationContainer"),
+    container: getElement("matTopPaginationContainer"),
     currentPage,
     total,
     perPage,
@@ -75,7 +75,7 @@ const initiatePagination = ({currentPage, total, perPage}) => {
   });
 
   createPagination({
-    container: getElement("cebBottomPaginationContainer"),
+    container: getElement("matBottomPaginationContainer"),
     currentPage,
     total,
     perPage,

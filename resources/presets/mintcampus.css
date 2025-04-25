@@ -8,26 +8,26 @@
     --course-card-border-radius: 15px;
 }
 
-.block_course_explorer {
+.block_mat_explorer {
     border: none !important;
 }
-.block_course_explorer .card-title {
+.block_mat_explorer .card-title {
     display: none !important;
 }
-.block_course_explorer .dropdown-menu .dropdown-item:hover {
+.block_mat_explorer .dropdown-menu .dropdown-item:hover {
     color: white !important;
 }
 
-#cebMainWrapper {
+#matMainWrapper {
     padding-top: 0;
 }
-.ceb-search input {
+.mat-search input {
     width: 100%;
 }
-.ceb-search .btn {
+.mat-search .btn {
     margin-top: 1px;
 }
-.ceb_res_container {
+.mat_res_container {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -146,22 +146,22 @@
     padding: 0;
 }
 
-.ceb-filter-dropdown-container {
+.mat-filter-dropdown-container {
     grid-template-areas: "categories topics targetgroups";
 }
 
 @media screen and (max-width: 768px) {
-    .ceb-filter-dropdown-container {
+    .mat-filter-dropdown-container {
         grid-template-areas: "categories" "topics" "targetgroups";
     }
 }
-.ceb-dropdown-categories {
+.mat-dropdown-categories {
     grid-area: categories;
 }
-.ceb-dropdown-topics {
+.mat-dropdown-topics {
     grid-area: topics;
 }
-.ceb-dropdown-targetgroups {
+.mat-dropdown-targetgroups {
     grid-area: targetgroups;
 }
 
@@ -214,7 +214,7 @@
     border-radius: var(--course-card-border-radius);
 }
 
-.ceb-modal .close-button button {
+.mat-modal .close-button button {
     height: 35px;
     width: 35px;
     padding: 0;
@@ -223,7 +223,7 @@
     align-items: center;
 }
 
-.ceb-modal .close-button i {
+.mat-modal .close-button i {
     margin-left: 1px;
 }
 

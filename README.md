@@ -1,7 +1,7 @@
 # Course Explorer Block
 
 ## Name
-block_course_explorer
+block_mat_explorer
 
 ## Description
 This is a block plugin to display and manage courses in Moodle 4+. Features of this plugin are extended filter and sorting options,
@@ -52,7 +52,7 @@ course_explorer_service (see [Dependencies on other plugins](#dependencies-on-ot
 
 ### format_mintcampus
 Course tile displays an average rating of a course and number of people, who has rated. At mein.mintcampus.org
-this information is aggregated and provided to block_course_explorer by course format mintcampus.
+this information is aggregated and provided to block_mat_explorer by course format mintcampus.
 ### local_course_explorer_service
 This is a backend of the block plugin aggregating and providing formatted data to the block's frontend.
 For correct work a web-service token is required (Site administration -> Server -> Manage tokens).
@@ -60,8 +60,8 @@ Created token should be saved in settings of Course Explorer (Site administratio
 -> Course Explorer)
 
 ## MINTCampus CSS-preset
-This preset is located in course_explorer/resources/presets/. File is loaded in the main block php-file (block_course_explorer).
-Generally, one could put own style sheet in the presets folder and adjust path to it in block_course_explorer in order
+This preset is located in course_explorer/resources/presets/. File is loaded in the main block php-file (block_mat_explorer).
+Generally, one could put own style sheet in the presets folder and adjust path to it in block_mat_explorer in order
 to apply it (while the checkbox in settings is checked).
 
 ## Screenshots

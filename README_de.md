@@ -1,7 +1,7 @@
 # Kurs-Explorer Block
 
 ## Name
-block_course_explorer
+block_mat_explorer
 
 ## Beschreibung
 Dies ist ein Block-Plugin zur Anzeige und Verwaltung von Kursen in Moodle 4+. Die Funktionen dieses Plugins sind erweiterte Filter- und Sortiermöglichkeiten,
@@ -53,7 +53,7 @@ course_explorer_service (siehe [Abhängigkeiten von anderen Plugins](#abhängigk
 
 ### format_mintcampus
 Die Kurskachel zeigt die durchschnittliche Bewertung eines Kurses und die Anzahl der Personen, die ihn bewertet haben. Auf mein.mintcampus.org
-werden diese Informationen aggregiert und dem block_course_explorer von format_mintcampus zur Verfügung gestellt.
+werden diese Informationen aggregiert und dem block_mat_explorer von format_mintcampus zur Verfügung gestellt.
 ### local_course_explorer_service
 Dies ist ein Backend des Block-Plugins, das die Daten aggregiert und formatiert an das Frontend des Blocks liefert.
 Für die korrekte Arbeit ist ein Web-Service-Token erforderlich (Website-Administration -> Server -> Token verwalten).
@@ -61,8 +61,8 @@ Das erstellte Token sollte in den Einstellungen des Kurs-Explorers gespeichert w
 -> Kurs-Explorer)
 
 ## MINTCampus CSS-Vorgabe
-Dieses Preset befindet sich in course_explorer/resources/presets/. Die Datei wird in der php-Datei des Hauptblocks (block_course_explorer) geladen.
-Generell könnte man ein eigenes Stylesheet in den presets-Ordner legen und den Pfad dazu in block_course_explorer anpassen, um
+Dieses Preset befindet sich in course_explorer/resources/presets/. Die Datei wird in der php-Datei des Hauptblocks (block_mat_explorer) geladen.
+Generell könnte man ein eigenes Stylesheet in den presets-Ordner legen und den Pfad dazu in block_mat_explorer anpassen, um
 um es anzuwenden (während die Checkbox in den Einstellungen aktiviert ist).
 
 ## Screenshots

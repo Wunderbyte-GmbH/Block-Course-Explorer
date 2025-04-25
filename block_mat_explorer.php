@@ -1,12 +1,12 @@
 <?php
 
-//use block_course_explorer\course_repository;
+//use block_mat_explorer\course_repository;
 
-class block_course_explorer extends block_base
+class block_mat_explorer extends block_base
 {
     function init()
     {
-        $this->title = get_string('pluginname', 'block_course_explorer');
+        $this->title = get_string('pluginname', 'block_mat_explorer');
     }
 
     function has_config() {
@@ -24,9 +24,9 @@ class block_course_explorer extends block_base
      */
     private function _set_resources() {
         global $USER;
-//$component = 'block_course_explorer';
+//$component = 'block_mat_explorer';
 //$this->resources['translations'] = get_string_manager()->load_component_strings($component, current_language());
-        $this->resources['wsToken'] = get_config('block_course_explorer', 'ws_token');
+        $this->resources['wsToken'] = get_config('block_mat_explorer', 'ws_token');
         $categoryids = $this->config->category_ids ?? '';
         $this->resources['categoryids'] = $categoryids;
         $this->resources['userid'] = $USER->id;
@@ -51,14 +51,14 @@ class block_course_explorer extends block_base
 
         $mycourses = $this->config->mycourses ?? 0;
         if ($mycourses) {
-            $this->page->requires->js_call_amd('block_course_explorer/my-courses/main', 'init', [$this->resources]);
-            $this->content->text = $OUTPUT->render_from_template('block_course_explorer/my-courses', $this->resources['template']);
+            $this->page->requires->js_call_amd('block_mat_explorer/my-courses/main', 'init', [$this->resources]);
+            $this->content->text = $OUTPUT->render_from_template('block_mat_explorer/my-courses', $this->resources['template']);
         } else {
-            $this->page->requires->js_call_amd('block_course_explorer/main', 'init', [$this->resources]);
-            $this->content->text = $OUTPUT->render_from_template('block_course_explorer/explorer', $this->resources['template']);
+            $this->page->requires->js_call_amd('block_mat_explorer/main', 'init', [$this->resources]);
+            $this->content->text = $OUTPUT->render_from_template('block_mat_explorer/explorer', $this->resources['template']);
         }
 
-        if (get_config('block_course_explorer', 'preset_mintcampus')) {
+        if (get_config('block_mat_explorer', 'preset_mintcampus')) {
             $this->page->requires->css(str_replace($CFG->dirroot, '', __DIR__) . '/resources/presets/mintcampus.css');
         }
 

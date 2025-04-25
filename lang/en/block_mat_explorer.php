@@ -1,6 +1,6 @@
 <?php
 
-$string['pluginname'] = 'Course Explorer';
+$string['pluginname'] = 'MAT Explorer';
 $string['privacy:metadata'] = 'To explorer courses and does not store any data itself.';
 
 $string['cardback:title'] = 'Brief info:';
