@@ -1,0 +1,37 @@
+<div id="id-{{instanceId}}">
+<div class="ceb-main-wrapper" id="cebMainWrapper">
+  <div class="ceb-main-content" id="cebMainContent">
+    <div class="w-100">
+      <div class="w-100">
+        <div class="ceb-search-container">
+          <div class="ceb-search">
+            <input
+              type="text"
+              class="form-control"
+              id="cebSearchInput"
+              placeholder="{{#str}}searchbarplaceholder, block_course_explorer{{/str}}"
+              aria-label="{{#str}}searchbarplaceholder, block_course_explorer{{/str}}"
+            />
+            <button class="btn btn-link" id="cebClearSearch" aria-label="{{#str}}searchclearbtn, block_course_explorer{{/str}}">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="cebDropDownContainer"
+        class="ceb-filter-dropdown-container"
+      ></div>
+      <div class="w-100 ceb-pagination-container">
+        <div class="ceb-total-count" id="cebCourseCount"></div>
+        <div class="ceb-top-pagination" id="cebTopPaginationContainer"></div>
+        <div class="ceb-sort-container" id="cebSortContainer"></div>
+      </div>
+      <div id="cebMainContainer" class="ceb_res_container"></div>
+      <div class="w-100 ceb-pagination-container bottom">
+        <div class="ceb-bottom-pagination" id="cebBottomPaginationContainer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
