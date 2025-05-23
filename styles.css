@@ -67,27 +67,27 @@
     gap: 1rem;
 }
 
-.card.course-card {
+.card.mat-card {
     border-radius: 0;
 }
-.course-card {
+.mat-card {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.4s ease;
 }
-.course-card:hover {
+.mat-card:hover {
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.4s ease;
 }
-.course-card__image img {
+.mat-card__image img {
     height: 100%;
     transition: transform 0.4s ease;
 }
-.course-card:hover .course-card__image img {
+.mat-card:hover .mat-card__image img {
     transform: scale(1.05);
     transition: transform 0.4s ease;
 }
 
-.course-card__info {
+.mat-card__info {
     display: flex;
     justify-content: space-between;
     padding:
@@ -96,28 +96,28 @@
     font-size: 14px;
 }
 
-.course-card__info .icon-image {
+.mat-card__info .icon-image {
     width: 18px;
     height: 18px;
 }
 
-.course-card__info-items {
+.mat-card__info-items {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.course-card__info-item {
+.mat-card__info-item {
     display: flex;
     align-items: center;
     gap: 3px;
 }
-.course-card__info-country img {
+.mat-card__info-country img {
     max-width: 25px;
     object-fit: cover;
 }
 
-.course-card__label.mc-original {
+.mat-card__label.mc-original {
     position: absolute;
     top: 20px;
     right: 15px;
@@ -127,19 +127,19 @@
     font-size: 10px;
     z-index: 2;
 }
-.course-card__label.favourite {
+.mat-card__label.favourite {
     position: absolute;
     top: 15px;
     left: 15px;
     padding: 8px;
     z-index: 2;
 }
-.course-card__label.favourite img {
+.mat-card__label.favourite img {
     width: 22px;
     filter: brightness(100);
 }
 
-.course-card__image {
+.mat-card__image {
     position: relative;
 }
 .card-front .caption {
@@ -150,13 +150,13 @@
     padding: 0 var(--course-explorer-card-x-padding);
 }
 
-.course-card__image img {
+.mat-card__image img {
     width: 100%;
     height: var(--image-height);
     object-fit: cover;
 }
 
-.course-card__content {
+.mat-card__content {
     padding:
         var(--course-explorer-card-y-padding)
         var(--course-explorer-card-x-padding);
@@ -169,41 +169,41 @@
     height: calc(100% - var(--image-height));
 }
 
-.course-card__description {
+.mat-card__description {
     font-size: 18px;
     line-height: 20px;
 }
 
-.course-card__content h3 {
+.mat-card__content h3 {
     font-size: 1.2rem;
     margin-top: 8px;
 }
 
-.course-card__content .course-card__quick-facts {
+.mat-card__content .mat-card__quick-facts {
     margin-top: 8px;
     width: 100%;
     column-gap: 8px;
 }
-.course-card__content .course-card__quick-facts .fa-star {
+.mat-card__content .mat-card__quick-facts .fa-star {
     margin-right: 2px;
 }
-.course-card__content .course-card__quick-facts i {
+.mat-card__content .mat-card__quick-facts i {
     font-size: 0.8rem;
 }
-.course-card__description {
+.mat-card__description {
     font-size: 0.8rem;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 1.5rem;
 }
-.course-card__tags {
+.mat-card__tags {
     column-gap: 8px;
 }
-.course-card__tags i {
+.mat-card__tags i {
     font-size: 1.3rem;
 }
 
-.course-card__actions {
+.mat-card__actions {
     width: 100%;
     position: absolute;
     bottom: 4px;
@@ -453,29 +453,29 @@
     background-color: var(--primary);
 }
 
-.course-card__action-button {
+.mat-card__action-button {
     display: flex !important;
     align-items: center;
     justify-content: center;
     gap: 2px;
 }
 
-.course-card__action-button .text {
+.mat-card__action-button .text {
     font-size: 13px;
 }
 
-.course-card__action-button i {
+.mat-card__action-button i {
     width: 30px;
     height: 30px;
     display: grid;
     place-items: center;
 }
 
-.course-card__action-button.primary i {
+.mat-card__action-button.primary i {
     background-color: var(--primary);
 }
 
-.course-card__action-button.secondary i {
+.mat-card__action-button.secondary i {
     background-color: #f8f9fa;
 }
 /*
@@ -501,7 +501,7 @@
     cursor: pointer;
 }
 
-.course-card-transform {
+.mat-card-transform {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
@@ -519,7 +519,7 @@
     text-align: left;
 }
 
-.card-front .course-card__progress {
+.card-front .mat-card__progress {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -527,7 +527,7 @@
     height: 10px;
 }
 
-.card-front .course-card__progress .course-card__progress-bar {
+.card-front .mat-card__progress .mat-card__progress-bar {
     height: 100%;
     background-color: #e4000d;
 }

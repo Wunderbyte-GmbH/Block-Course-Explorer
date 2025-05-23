@@ -13,21 +13,24 @@ import {
   updateMainContainer,
   initiateSearch,
   updateCourseCount,
-  getFilterState, prepareSortDropdown, SORT_TYPES,
+  getFilterState,
+  prepareSortDropdown,
+  SORT_TYPES,
 } from "../static-selectors";
 import {createPagination} from "../pagination";
+
 let courses = [];
 
 const handleFilter = () => {
-  let filteredCourses = [...courses];
+  let filteredCourses = courses.filter(course => course.ismaterial === true);
   const filterStates = getFilterState();
 
   if (filterStates[FILTER_TYPES.QUERY] !== null) {
     const toSearch = filterStates[FILTER_TYPES.QUERY].toLowerCase();
     filteredCourses = filteredCourses.filter((course) => {
       return (
-          course.title.toLowerCase().includes(toSearch) ||
-          course.description.toLowerCase().includes(toSearch)
+        course.title.toLowerCase().includes(toSearch) ||
+        course.description.toLowerCase().includes(toSearch)
       );
     });
   }
@@ -53,9 +56,9 @@ const handleFilter = () => {
     perPage: filterStates.PAGE_SIZE,
   });
   updateMainContainer(
-      filteredCourses
-          .splice(filterStates.CURRENT_PAGE * filterStates.PAGE_SIZE, filterStates.PAGE_SIZE)
-          .map((course) => courseCardTemplate(course))
+    filteredCourses
+      .slice(filterStates.CURRENT_PAGE * filterStates.PAGE_SIZE, (filterStates.CURRENT_PAGE + 1) * filterStates.PAGE_SIZE)
+      .map((course) => courseCardTemplate(course))
   );
 
   return returnValues;
@@ -92,17 +95,17 @@ export const init = ({wsToken, userid, instanceId}) => {
   setWsToken(wsToken);
   loading.show();
   getMyCourses(
-      userid,
-      (response) => {
-        if (response) {
-          courses = response;
-          initiateSearch(handleFilter);
-          prepareSortDropdown(handleFilter);
-          handleFilter();
+    userid,
+    (response) => {
+      if (response) {
+        courses = response;
+        initiateSearch(handleFilter);
+        prepareSortDropdown(handleFilter);
+        handleFilter();
 
-          setTimeout(() => {
-            loading.hide();
-          }, 1000);
-        }
-      });
+        setTimeout(() => {
+          loading.hide();
+        }, 1000);
+      }
+    });
 };

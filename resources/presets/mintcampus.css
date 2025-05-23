@@ -5,7 +5,7 @@
 
 :root {
     --course-explorer-card-x-padding: 25px;
-    --course-card-border-radius: 15px;
+    --mat-card-border-radius: 15px;
 }
 
 .block_mat_explorer {
@@ -15,7 +15,7 @@
     display: none !important;
 }
 .block_mat_explorer .dropdown-menu .dropdown-item:hover {
-    color: white !important;
+    color: #000 !important;
 }
 
 #matMainWrapper {
@@ -31,47 +31,47 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.card.course-card {
+.card.mat-card {
     padding: 0;
     border: none;
-    border-radius: var(--course-card-border-radius);
+    border-radius: var(--mat-card-border-radius);
 }
-.card.course-card:focus-visible {
+.card.mat-card:focus-visible {
     padding: 2px;
 }
 
-.course-card__image {
+.mat-card__image {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     z-index: 0;
 }
-.course-card__background {
+.mat-card__background {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg, rgba(85, 28, 119, 0) 0%, rgb(85, 28, 119) 81%);
-    opacity: 0.9;
+    background: linear-gradient(0deg, rgb(240, 233, 229) 0%, rgba(240, 233, 229, 0.2) 100%);
+    opacity: 1;
     transition: opacity 0.2s ease !important;
 }
-.course-card:hover .course-card__background {
+.mat-card:hover .mat-card__background {
     opacity: 0.65;
 }
 
-.course-card__image img {
+.mat-card__image img {
     height: 100%;
     transform: scale(1.1);
     transition: transform 0.4s ease;
 }
-.course-card:hover .course-card__image img {
+.mat-card:hover .mat-card__image img {
     transform: scale(1);
     transition: transform 0.4s ease;
 }
 
-.course-card__label.mc-original {
+.mat-card__label.mc-original {
     position: absolute;
     top: 20px;
     right: 15px;
@@ -81,68 +81,68 @@
     font-size: 10px;
     z-index: 2;
 }
-.course-card__label.favourite {
+.mat-card__label.favourite {
     position: absolute;
     top: 15px;
     left: 15px;
     padding: 8px;
     z-index: 2;
 }
-.course-card__label.favourite img {
+.mat-card__label.favourite img {
     width: 22px;
     filter: brightness(100);
 }
 
-.course-card__content {
+.mat-card__content {
     margin-bottom: 20px;
     color: #f0e9e5;
     z-index: 2;
 }
-.course-card__content * {
+.mat-card__content * {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.course-card__content .course-card__sender-name {
+.mat-card__content .mat-card__sender-name {
     font-size: 16px;
 }
-.course-card__content .course-card__title {
-    color: white;
+.mat-card__content .mat-card__title {
+    color: #000;
     font-size: 26px;
     line-height: 34px;
     font-weight: 600;
 }
-.course-card__content .course-card__quick-facts {
+.mat-card__content .mat-card__quick-facts {
     margin-top: 8px;
     width: 100%;
     column-gap: 8px;
 }
-.course-card__content .course-card__quick-facts .fa-star {
+.mat-card__content .mat-card__quick-facts .fa-star {
     margin-right: 2px;
 }
-.course-card__content .course-card__quick-facts i {
+.mat-card__content .mat-card__quick-facts i {
     font-size: 1.3rem;
 }
-.course-card__content .course-card__description {
-    color: white;
+.mat-card__content .mat-card__description {
+    color: #000;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 1.5rem;
 }
-.course-card__content .course-card__tags {
+.mat-card__content .mat-card__tags {
     column-gap: 8px;
 }
-.course-card__content .course-card__tags i {
+.mat-card__content .mat-card__tags i {
     font-size: 1.3rem;
 }
-.course-card__content .course-card__actions {
+.mat-card__content .mat-card__actions {
     position: relative;
     bottom: 0;
     justify-content: flex-end;
 }
-.course-card__content .course-card__actions .course-card__action-button {
+.mat-card__content .mat-card__actions .mat-card__action-button {
     padding: 0;
 }
 
@@ -165,28 +165,28 @@
     grid-area: targetgroups;
 }
 
-.course-card__action-button.primary {
+.mat-card__action-button.primary {
     padding: 10px 18px;
     background-color: #f6688e;
     color: #252131;
     border: none;
     font-size: 1rem;
 }
-.course-card__action-button.primary:hover {
+.mat-card__action-button.primary:hover {
     background-color: #b84b68;
 }
 
-.course-card__action-button.secondary {
+.mat-card__action-button.secondary {
     position: static;
 }
 
-.course-card__action-button.secondary > i {
+.mat-card__action-button.secondary > i {
     background: transparent;
-    color: white;
-    border: 1px solid white;
+    color: #000;
+    border: 1px solid #000;
 }
-.course-card__action-button.secondary:hover > i {
-    background: white;
+.mat-card__action-button.secondary:hover > i {
+    background: #000;
     color: black;
 }
 
@@ -211,7 +211,7 @@
 
 .card-front {
     height: 100%;
-    border-radius: var(--course-card-border-radius);
+    border-radius: var(--mat-card-border-radius);
 }
 
 .mat-modal .close-button button {
@@ -242,3 +242,13 @@
     flex: 1;
     padding: 0 2rem;
 }
+
+.mat-card__content .mat-card__quick-facts,.mat-card__label favourite, 
+.mat-card__tags, .mat-card__sender-name {
+  color: black;
+}
+
+.mat-card__label.favourite img {
+  display: none;
+}
+
