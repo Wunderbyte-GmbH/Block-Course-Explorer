@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -18,22 +17,26 @@
 defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
-    $pluginname = 'block_mat_explorer';
+    $pluginname = 'block_course_explorer';
 
     // Presentation options heading.
-    $settings->add(new admin_setting_heading('pluginname',
+    $settings->add(new admin_setting_heading(
+        'pluginname',
         get_string('pluginname', $pluginname),
-        ''));
+        ''
+    ));
 
     $settings->add(new admin_setting_configtext(
-        'block_mat_explorer/ws_token',
+        'block_course_explorer/ws_token',
         get_string('setting:ws_token', $pluginname),
         get_string('setting:ws_token_desc', $pluginname),
-        ''));
+        ''
+    ));
 
     $settings->add(new admin_setting_configcheckbox(
-        'block_mat_explorer/preset_mintcampus',
+        'block_course_explorer/preset_mintcampus',
         get_string('setting:preset_mintcampus', $pluginname),
         get_string('setting:preset_mintcampus_desc', $pluginname),
-        0));
+        0
+    ));
 }

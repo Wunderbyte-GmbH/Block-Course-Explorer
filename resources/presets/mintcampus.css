@@ -5,73 +5,73 @@
 
 :root {
     --course-explorer-card-x-padding: 25px;
-    --mat-card-border-radius: 15px;
+    --course-card-border-radius: 15px;
 }
 
-.block_mat_explorer {
+.block_course_explorer {
     border: none !important;
 }
-.block_mat_explorer .card-title {
+.block_course_explorer .card-title {
     display: none !important;
 }
-.block_mat_explorer .dropdown-menu .dropdown-item:hover {
-    color: #000 !important;
+.block_course_explorer .dropdown-menu .dropdown-item:hover {
+    color: white !important;
 }
 
-#matMainWrapper {
+#cebMainWrapper {
     padding-top: 0;
 }
-.mat-search input {
+.ceb-search input {
     width: 100%;
 }
-.mat-search .btn {
+.ceb-search .btn {
     margin-top: 1px;
 }
-.mat_res_container {
+.ceb_res_container {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.card.mat-card {
+.card.course-card {
     padding: 0;
     border: none;
-    border-radius: var(--mat-card-border-radius);
+    border-radius: var(--course-card-border-radius);
 }
-.card.mat-card:focus-visible {
+.card.course-card:focus-visible {
     padding: 2px;
 }
 
-.mat-card__image {
+.course-card__image {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     z-index: 0;
 }
-.mat-card__background {
+.course-card__background {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(0deg, rgb(240, 233, 229) 0%, rgba(240, 233, 229, 0.2) 100%);
-    opacity: 1;
+    background: linear-gradient(180deg, rgba(85, 28, 119, 0) 0%, rgb(85, 28, 119) 81%);
+    opacity: 0.9;
     transition: opacity 0.2s ease !important;
 }
-.mat-card:hover .mat-card__background {
+.course-card:hover .course-card__background {
     opacity: 0.65;
 }
 
-.mat-card__image img {
+.course-card__image img {
     height: 100%;
     transform: scale(1.1);
     transition: transform 0.4s ease;
 }
-.mat-card:hover .mat-card__image img {
+.course-card:hover .course-card__image img {
     transform: scale(1);
     transition: transform 0.4s ease;
 }
 
-.mat-card__label.mc-original {
+.course-card__label.mc-original {
     position: absolute;
     top: 20px;
     right: 15px;
@@ -81,112 +81,112 @@
     font-size: 10px;
     z-index: 2;
 }
-.mat-card__label.favourite {
+.course-card__label.favourite {
     position: absolute;
     top: 15px;
     left: 15px;
     padding: 8px;
     z-index: 2;
 }
-.mat-card__label.favourite img {
+.course-card__label.favourite img {
     width: 22px;
     filter: brightness(100);
 }
 
-.mat-card__content {
+.course-card__content {
     margin-bottom: 20px;
     color: #f0e9e5;
     z-index: 2;
 }
-.mat-card__content * {
+.course-card__content * {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.mat-card__content .mat-card__sender-name {
+.course-card__content .course-card__sender-name {
     font-size: 16px;
 }
-.mat-card__content .mat-card__title {
-    color: #000;
+.course-card__content .course-card__title {
+    color: white;
     font-size: 26px;
     line-height: 34px;
     font-weight: 600;
 }
-.mat-card__content .mat-card__quick-facts {
+.course-card__content .course-card__quick-facts {
     margin-top: 8px;
     width: 100%;
     column-gap: 8px;
 }
-.mat-card__content .mat-card__quick-facts .fa-star {
+.course-card__content .course-card__quick-facts .fa-star {
     margin-right: 2px;
 }
-.mat-card__content .mat-card__quick-facts i {
+.course-card__content .course-card__quick-facts i {
     font-size: 1.3rem;
 }
-.mat-card__content .mat-card__description {
-    color: #000;
+.course-card__content .course-card__description {
+    color: white;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 1.5rem;
 }
-.mat-card__content .mat-card__tags {
+.course-card__content .course-card__tags {
     column-gap: 8px;
 }
-.mat-card__content .mat-card__tags i {
+.course-card__content .course-card__tags i {
     font-size: 1.3rem;
 }
-.mat-card__content .mat-card__actions {
+.course-card__content .course-card__actions {
     position: relative;
     bottom: 0;
     justify-content: flex-end;
 }
-.mat-card__content .mat-card__actions .mat-card__action-button {
+.course-card__content .course-card__actions .course-card__action-button {
     padding: 0;
 }
 
-.mat-filter-dropdown-container {
+.ceb-filter-dropdown-container {
     grid-template-areas: "categories topics targetgroups";
 }
 
 @media screen and (max-width: 768px) {
-    .mat-filter-dropdown-container {
+    .ceb-filter-dropdown-container {
         grid-template-areas: "categories" "topics" "targetgroups";
     }
 }
-.mat-dropdown-categories {
+.ceb-dropdown-categories {
     grid-area: categories;
 }
-.mat-dropdown-topics {
+.ceb-dropdown-topics {
     grid-area: topics;
 }
-.mat-dropdown-targetgroups {
+.ceb-dropdown-targetgroups {
     grid-area: targetgroups;
 }
 
-.mat-card__action-button.primary {
+.course-card__action-button.primary {
     padding: 10px 18px;
     background-color: #f6688e;
     color: #252131;
     border: none;
     font-size: 1rem;
 }
-.mat-card__action-button.primary:hover {
+.course-card__action-button.primary:hover {
     background-color: #b84b68;
 }
 
-.mat-card__action-button.secondary {
+.course-card__action-button.secondary {
     position: static;
 }
 
-.mat-card__action-button.secondary > i {
+.course-card__action-button.secondary > i {
     background: transparent;
-    color: #000;
-    border: 1px solid #000;
+    color: white;
+    border: 1px solid white;
 }
-.mat-card__action-button.secondary:hover > i {
-    background: #000;
+.course-card__action-button.secondary:hover > i {
+    background: white;
     color: black;
 }
 
@@ -211,10 +211,10 @@
 
 .card-front {
     height: 100%;
-    border-radius: var(--mat-card-border-radius);
+    border-radius: var(--course-card-border-radius);
 }
 
-.mat-modal .close-button button {
+.ceb-modal .close-button button {
     height: 35px;
     width: 35px;
     padding: 0;
@@ -223,7 +223,7 @@
     align-items: center;
 }
 
-.mat-modal .close-button i {
+.ceb-modal .close-button i {
     margin-left: 1px;
 }
 
@@ -242,13 +242,3 @@
     flex: 1;
     padding: 0 2rem;
 }
-
-.mat-card__content .mat-card__quick-facts,.mat-card__label favourite, 
-.mat-card__tags, .mat-card__sender-name {
-  color: black;
-}
-
-.mat-card__label.favourite img {
-  display: none;
-}
-

@@ -62,17 +62,17 @@ getString('sortfavouritesdesc', 'block_course_explorer').then((string) => {
 }).catch();
 
 export const SELECTORS = {
-  MAIN_WRAPPER: "matMainWrapper",
-  MAIN_CONTAINER: "matMainContainer",
-  DROPDOWN_CONTAINER: "matDropDownContainer",
-  LOADING_CONTAINER: "matLoadingContainer",
-  SEARCH_INPUT: "matSearchInput",
-  SEARCH_CLEAR_BUTTON: "matClearSearch",
-  COURSE_COUNT: "matCourseCount",
-  TOP_PAGINATION_CONTAINER: "matTopPaginationContainer",
-  BOTTOM_PAGINATION_CONTAINER: "matBottomPaginationContainer",
-  SORT_DROPDOWN_CONTAINER: "matSortContainer",
-  COURSE_DETAIL_MODAL: "mat_modal",
+  MAIN_WRAPPER: "cebMainWrapper",
+  MAIN_CONTAINER: "cebMainContainer",
+  DROPDOWN_CONTAINER: "cebDropDownContainer",
+  LOADING_CONTAINER: "cebLoadingContainer",
+  SEARCH_INPUT: "cebSearchInput",
+  SEARCH_CLEAR_BUTTON: "cebClearSearch",
+  COURSE_COUNT: "cebCourseCount",
+  TOP_PAGINATION_CONTAINER: "cebTopPaginationContainer",
+  BOTTOM_PAGINATION_CONTAINER: "cebBottomPaginationContainer",
+  SORT_DROPDOWN_CONTAINER: "cebSortContainer",
+  COURSE_DETAIL_MODAL: "ceb_modal",
 };
 
 let filterState = {
@@ -169,7 +169,7 @@ export const prepareDropDowns = async(handleFilter, activeFilters, triggeredFilt
           prepareDropDowns(handleFilter, filters, triggeredFilter, true);
         }
       },
-      className: "mat-dropdown-" + filter.name.toLowerCase(),
+      className: "ceb-dropdown-" + filter.name.toLowerCase(),
     });
     dropDowns.push(dropDown);
   }

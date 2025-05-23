@@ -4,7 +4,7 @@ let openCourseEnabled = true;
 
 export const courseCardTemplate = (values) => {
     const elementDefinition = `
-    <div class="card mat-card ${values.userEnrolled ? 'to-course' : 'enrol-into-course'}" data-id="${values.id}" tabindex="0">
+    <div class="card course-card ${values.userEnrolled ? 'to-course' : 'enrol-into-course'}" data-id="${values.id}" tabindex="0">
         <div class="card-content"></div>
     </div>`;
     const element = $(elementDefinition);
@@ -93,20 +93,20 @@ const courseCardFrontTemplate = (
 
     return $(`
     <div class="card-front">
-        <div class="mat-card__image">
+        <div class="course-card__image">
            ${image ?
         "<img src=\"" + image + "\" alt=\"\">" : "<img src=\"https://picsum.photos/2124\" alt=\"\">"}
         </div>
-        <div class="mat-card__background"></div>
+        <div class="course-card__background"></div>
         
-        ${mcoriginal ? "<div class=\"mat-card__label mc-original\">MINT-Campus-Original</div>" : ""}
+        ${mcoriginal ? "<div class=\"course-card__label mc-original\">MINT-Campus-Original</div>" : ""}
         
-        <div class="mat-card__content">
-            <small class="mat-card__sender-name">${senderName}</small>
-            <h3 class="mat-card__title">
+        <div class="course-card__content">
+            <small class="course-card__sender-name">${senderName}</small>
+            <h3 class="course-card__title">
                 ${title}        
             </h3>
-            <div class="mat-card__quick-facts d-sm-flex justify-content-between flex-wrap">
+            <div class="course-card__quick-facts d-sm-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-center">
                     <i class="fa fa-graduation-cap mr-1"></i>
                     <span>${courseType}</span>
@@ -119,11 +119,11 @@ const courseCardFrontTemplate = (
                     ${getRating(score, reviewsnum)}
                 </div>
             </div>
-            <p class="mat-card__description">
+            <p class="course-card__description">
                 ${courseCardDescription}
             </p>
             ${topics?.length > 0 ?
-                `<div class="mat-card__tags d-flex">
+                `<div class="course-card__tags d-flex">
                     <div class="d-flex align-items-center">
                         <i class="fa fa-tag"></i>
                     </div>

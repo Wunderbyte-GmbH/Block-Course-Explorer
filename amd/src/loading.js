@@ -20,7 +20,7 @@ const _unblur = () => {
 const _create = () => {
   const loadingContainer = document.createElement("div");
   loadingContainer.id = SELECTORS.LOADING_CONTAINER;
-  loadingContainer.classList.add("mat-loading-container");
+  loadingContainer.classList.add("ceb-loading-container");
   loadingContainer.style.display = "flex";
   loadingContainer.style.justifyContent = "center";
   loadingContainer.style.alignItems = "center";

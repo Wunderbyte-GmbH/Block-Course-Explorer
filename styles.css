@@ -2,32 +2,32 @@
     --course-explorer-card-x-padding: 12px;
     --course-explorer-card-y-padding: 8px;
     --card-height: 440px;
-    --mat-main-color: #e3000b;
+    --ceb-main-color: #e3000b;
     --image-height: 130px;
 }
 
-.mat-main-wrapper {
+.ceb-main-wrapper {
     width: 100%;
     position: relative;
     padding: 24px 0;
 }
 
-.mat-main-wrapper header {
+.ceb-main-wrapper header {
     font-size: 24px;
     margin-bottom: 16px;
 }
 
-.mat-search {
+.ceb-search {
     position: relative;
 }
 
-.mat-search .btn {
+.ceb-search .btn {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.mat-pagination-container {
+.ceb-pagination-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,24 +35,24 @@
     font-weight: bold;
 }
 
-#matTopPaginationContainer {
+#cebTopPaginationContainer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.mat-pagination-container.bottom {
+.ceb-pagination-container.bottom {
     justify-content: center;
     margin-top: 50px !important;
     margin-bottom: 24px !important;
 }
 
-.mat-pagination-numbers {
+.ceb-pagination-numbers {
     display: flex;
     gap: 4px;
 }
 
-.mat-pagination {
+.ceb-pagination {
     padding:
         var(--course-explorer-card-y-padding)
         var(--course-explorer-card-x-padding);
@@ -61,33 +61,33 @@
     justify-content: center;
 }
 
-.mat_res_container {
+.ceb_res_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
 }
 
-.card.mat-card {
+.card.course-card {
     border-radius: 0;
 }
-.mat-card {
+.course-card {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.4s ease;
 }
-.mat-card:hover {
+.course-card:hover {
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.4s ease;
 }
-.mat-card__image img {
+.course-card__image img {
     height: 100%;
     transition: transform 0.4s ease;
 }
-.mat-card:hover .mat-card__image img {
+.course-card:hover .course-card__image img {
     transform: scale(1.05);
     transition: transform 0.4s ease;
 }
 
-.mat-card__info {
+.course-card__info {
     display: flex;
     justify-content: space-between;
     padding:
@@ -96,28 +96,28 @@
     font-size: 14px;
 }
 
-.mat-card__info .icon-image {
+.course-card__info .icon-image {
     width: 18px;
     height: 18px;
 }
 
-.mat-card__info-items {
+.course-card__info-items {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.mat-card__info-item {
+.course-card__info-item {
     display: flex;
     align-items: center;
     gap: 3px;
 }
-.mat-card__info-country img {
+.course-card__info-country img {
     max-width: 25px;
     object-fit: cover;
 }
 
-.mat-card__label.mc-original {
+.course-card__label.mc-original {
     position: absolute;
     top: 20px;
     right: 15px;
@@ -127,19 +127,19 @@
     font-size: 10px;
     z-index: 2;
 }
-.mat-card__label.favourite {
+.course-card__label.favourite {
     position: absolute;
     top: 15px;
     left: 15px;
     padding: 8px;
     z-index: 2;
 }
-.mat-card__label.favourite img {
+.course-card__label.favourite img {
     width: 22px;
     filter: brightness(100);
 }
 
-.mat-card__image {
+.course-card__image {
     position: relative;
 }
 .card-front .caption {
@@ -150,13 +150,13 @@
     padding: 0 var(--course-explorer-card-x-padding);
 }
 
-.mat-card__image img {
+.course-card__image img {
     width: 100%;
     height: var(--image-height);
     object-fit: cover;
 }
 
-.mat-card__content {
+.course-card__content {
     padding:
         var(--course-explorer-card-y-padding)
         var(--course-explorer-card-x-padding);
@@ -169,41 +169,41 @@
     height: calc(100% - var(--image-height));
 }
 
-.mat-card__description {
+.course-card__description {
     font-size: 18px;
     line-height: 20px;
 }
 
-.mat-card__content h3 {
+.course-card__content h3 {
     font-size: 1.2rem;
     margin-top: 8px;
 }
 
-.mat-card__content .mat-card__quick-facts {
+.course-card__content .course-card__quick-facts {
     margin-top: 8px;
     width: 100%;
     column-gap: 8px;
 }
-.mat-card__content .mat-card__quick-facts .fa-star {
+.course-card__content .course-card__quick-facts .fa-star {
     margin-right: 2px;
 }
-.mat-card__content .mat-card__quick-facts i {
+.course-card__content .course-card__quick-facts i {
     font-size: 0.8rem;
 }
-.mat-card__description {
+.course-card__description {
     font-size: 0.8rem;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 1.5rem;
 }
-.mat-card__tags {
+.course-card__tags {
     column-gap: 8px;
 }
-.mat-card__tags i {
+.course-card__tags i {
     font-size: 1.3rem;
 }
 
-.mat-card__actions {
+.course-card__actions {
     width: 100%;
     position: absolute;
     bottom: 4px;
@@ -211,7 +211,7 @@
     justify-content: space-between;
 }
 
-.mat-filter-dropdown-container {
+.ceb-filter-dropdown-container {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
     grid-template-columns: repeat(3, 1fr);
@@ -222,39 +222,39 @@
     margin: 12px 0;
 }
 
-.mat-dropdown-categories {
+.ceb-dropdown-categories {
     grid-area: categories;
 }
-.mat-dropdown-subcategory {
+.ceb-dropdown-subcategory {
     grid-area: subcategories;
 }
-.mat-dropdown-types {
+.ceb-dropdown-types {
     grid-area: types;
 }
-.mat-dropdown-languages {
+.ceb-dropdown-languages {
     grid-area: languages;
 }
-.mat-dropdown-venues {
+.ceb-dropdown-venues {
     grid-area: venues;
 }
-.mat-dropdown-countries {
+.ceb-dropdown-countries {
     grid-area: countries;
     display: none;
 }
 
-.mat-filter-dropdown-container .dropdown-container,
-.mat-sort-container .dropdown-container {
+.ceb-filter-dropdown-container .dropdown-container,
+.ceb-sort-container .dropdown-container {
     position: relative;
 }
 
-.mat-filter-dropdown-container .dropdown-container .text-container,
-.mat-sort-container .dropdown-container .text-container {
+.ceb-filter-dropdown-container .dropdown-container .text-container,
+.ceb-sort-container .dropdown-container .text-container {
     width: 95%;
     display: inline-block;
     text-align: left;
 }
 
-.mat-filter-dropdown-container .dropdown-container .dropdown-item {
+.ceb-filter-dropdown-container .dropdown-container .dropdown-item {
     cursor: pointer;
 }
 
@@ -279,17 +279,17 @@
     line-height: 14px;
 }
 
-.mat-sort-container .dropdown-container {
+.ceb-sort-container .dropdown-container {
     min-width: 220px;
 }
 
-.mat-sort-container .dropdown-container .text {
+.ceb-sort-container .dropdown-container .text {
     overflow: hidden;
     max-width: 78%;
     text-overflow: ellipsis;
 }
 
-.mat-loading-container {
+.ceb-loading-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,7 +297,7 @@
     height: 100%;
 }
 
-.mat-loading-container .spinner {
+.ceb-loading-container .spinner {
     position: relative;
     width: 48px;
     height: 48px;
@@ -308,7 +308,7 @@
     border-radius: 10px;
 }
 
-.mat-loading-container .spinner div {
+.ceb-loading-container .spinner div {
     width: 10%;
     height: 16%;
     background: var(--primary);
@@ -324,84 +324,84 @@
     animation: fade 1s linear infinite;
 }
 
-.mat-loading-container .spinner .bar1 {
+.ceb-loading-container .spinner .bar1 {
     transform: rotate(0deg) translate(0, -130%);
     animation-delay: 0s;
     -webkit-transform: rotate(0deg) translate(0, -130%);
     -webkit-animation-delay: 0s;
 }
 
-.mat-loading-container .spinner .bar2 {
+.ceb-loading-container .spinner .bar2 {
     transform: rotate(30deg) translate(0, -130%);
     animation-delay: -0.9167s;
     -webkit-transform: rotate(30deg) translate(0, -130%);
     -webkit-animation-delay: -0.9167s;
 }
 
-.mat-loading-container .spinner .bar3 {
+.ceb-loading-container .spinner .bar3 {
     transform: rotate(60deg) translate(0, -130%);
     animation-delay: -0.833s;
     -webkit-transform: rotate(60deg) translate(0, -130%);
     -webkit-animation-delay: -0.833s;
 }
 
-.mat-loading-container .spinner .bar4 {
+.ceb-loading-container .spinner .bar4 {
     transform: rotate(90deg) translate(0, -130%);
     animation-delay: -0.7497s;
     -webkit-transform: rotate(90deg) translate(0, -130%);
     -webkit-animation-delay: -0.7497s;
 }
 
-.mat-loading-container .spinner .bar5 {
+.ceb-loading-container .spinner .bar5 {
     transform: rotate(120deg) translate(0, -130%);
     animation-delay: -0.667s;
     -webkit-transform: rotate(120deg) translate(0, -130%);
     -webkit-animation-delay: -0.667s;
 }
 
-.mat-loading-container .spinner .bar6 {
+.ceb-loading-container .spinner .bar6 {
     transform: rotate(150deg) translate(0, -130%);
     animation-delay: -0.5837s;
     -webkit-transform: rotate(150deg) translate(0, -130%);
     -webkit-animation-delay: -0.5837s;
 }
 
-.mat-loading-container .spinner .bar7 {
+.ceb-loading-container .spinner .bar7 {
     transform: rotate(180deg) translate(0, -130%);
     animation-delay: -0.5s;
     -webkit-transform: rotate(180deg) translate(0, -130%);
     -webkit-animation-delay: -0.5s;
 }
 
-.mat-loading-container .spinner .bar8 {
+.ceb-loading-container .spinner .bar8 {
     transform: rotate(210deg) translate(0, -130%);
     animation-delay: -0.4167s;
     -webkit-transform: rotate(210deg) translate(0, -130%);
     -webkit-animation-delay: -0.4167s;
 }
 
-.mat-loading-container .spinner .bar9 {
+.ceb-loading-container .spinner .bar9 {
     transform: rotate(240deg) translate(0, -130%);
     animation-delay: -0.333s;
     -webkit-transform: rotate(240deg) translate(0, -130%);
     -webkit-animation-delay: -0.333s;
 }
 
-.mat-loading-container .spinner .bar10 {
+.ceb-loading-container .spinner .bar10 {
     transform: rotate(270deg) translate(0, -130%);
     animation-delay: -0.2497s;
     -webkit-transform: rotate(270deg) translate(0, -130%);
     -webkit-animation-delay: -0.2497s;
 }
 
-.mat-loading-container .spinner .bar11 {
+.ceb-loading-container .spinner .bar11 {
     transform: rotate(300deg) translate(0, -130%);
     animation-delay: -0.167s;
     -webkit-transform: rotate(300deg) translate(0, -130%);
     -webkit-animation-delay: -0.167s;
 }
 
-.mat-loading-container .spinner .bar12 {
+.ceb-loading-container .spinner .bar12 {
     transform: rotate(330deg) translate(0, -130%);
     animation-delay: -0.0833s;
     -webkit-transform: rotate(330deg) translate(0, -130%);
@@ -453,29 +453,29 @@
     background-color: var(--primary);
 }
 
-.mat-card__action-button {
+.course-card__action-button {
     display: flex !important;
     align-items: center;
     justify-content: center;
     gap: 2px;
 }
 
-.mat-card__action-button .text {
+.course-card__action-button .text {
     font-size: 13px;
 }
 
-.mat-card__action-button i {
+.course-card__action-button i {
     width: 30px;
     height: 30px;
     display: grid;
     place-items: center;
 }
 
-.mat-card__action-button.primary i {
+.course-card__action-button.primary i {
     background-color: var(--primary);
 }
 
-.mat-card__action-button.secondary i {
+.course-card__action-button.secondary i {
     background-color: #f8f9fa;
 }
 /*
@@ -501,7 +501,7 @@
     cursor: pointer;
 }
 
-.mat-card-transform {
+.course-card-transform {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
@@ -519,7 +519,7 @@
     text-align: left;
 }
 
-.card-front .mat-card__progress {
+.card-front .course-card__progress {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -527,13 +527,13 @@
     height: 10px;
 }
 
-.card-front .mat-card__progress .mat-card__progress-bar {
+.card-front .course-card__progress .course-card__progress-bar {
     height: 100%;
     background-color: #e4000d;
 }
 
 @media screen and (max-width: 768px) {
-    .mat-filter-dropdown-container {
+    .ceb-filter-dropdown-container {
         grid-template-columns: 1fr;
         grid-template-areas:
             "categories"
@@ -541,31 +541,31 @@
             "venues" "countries";
     }
 
-    .mat-pagination-container {
+    .ceb-pagination-container {
         flex-direction: column;
         align-items: start;
         gap: 12px;
     }
-    .mat-pagination-container.top {
+    .ceb-pagination-container.top {
         margin-bottom: 20px;
     }
-    .mat-pagination-container.bottom {
+    .ceb-pagination-container.bottom {
         margin-top: 20px !important;
     }
-    #matSortContainer {
+    #cebSortContainer {
         width: 100% !important;
     }
-    #matTopPaginationContainer {
+    #cebTopPaginationContainer {
         width: 100%;
         position: static;
         left: 0;
         transform: none;
     }
-    #matBottomPaginationContainer {
+    #cebBottomPaginationContainer {
         width: 100% !important;
     }
-    #matTopPaginationContainer .pagination,
-    #matBottomPaginationContainer .pagination {
+    #cebTopPaginationContainer .pagination,
+    #cebBottomPaginationContainer .pagination {
         flex-wrap: wrap;
         justify-content: center;
     }

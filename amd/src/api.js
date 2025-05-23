@@ -8,6 +8,7 @@ export const getCourses = (categoryids, userid, success) => {
   });
 
   const url = `${endpoint}?${paramets}&categoryids=${categoryids}&userid=${userid}`;
+  console.log(url);
   fetch(url, {
     method: "GET"
   })
