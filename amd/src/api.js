@@ -1,4 +1,5 @@
 import {getTokens} from "./token";
+import $ from "jquery";
 
 const tokens = getTokens();
 export const getCourses = (categoryids, userid, success) => {
