@@ -1,4 +1,5 @@
 import Notification from "core/notification";
+import $ from "jquery";
 
 export const courseCardTemplate = (values) => {
   const elementDefinition = `

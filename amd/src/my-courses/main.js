@@ -6,6 +6,7 @@ import {setWsToken} from "../token";
 import {getMyCourses} from "../api";
 import {courseCardTemplate} from "./templates";
 import * as loading from "../loading";
+import $ from "jquery";
 import { getElement, setInstanceId } from "../static-selectors";
 import {
   FILTER_TYPES,
