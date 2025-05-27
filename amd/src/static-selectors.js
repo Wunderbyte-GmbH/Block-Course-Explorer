@@ -1,5 +1,6 @@
 import {dropDownTemplate} from "./templates";
 import {get_string as getString} from 'core/str';
+import $ from "jquery";
 
 let dropDownData = null;
 let instanceRoot = "";
