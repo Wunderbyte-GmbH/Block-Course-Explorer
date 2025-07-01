@@ -98,20 +98,14 @@ const courseCardFrontTemplate = (
               <div class="mr-3 d-flex align-items-center">
                 <i class="fa fa-graduation-cap mr-1"></i> 
               </div>
-              <div class="mr-3 d-flex align-items-center">
-                <i class="fa fa-clock-o mr-1"></i> ${duration}
-              </div>
+
               <div class="d-flex align-items-center">
                 ${getRating(score, reviewsnum)}
               </div>
             </div>
-            <p class="card-text">${courseCardDescription}</p>
-            ${topics?.length > 0 ? `
-              <div class="d-flex align-items-center mt-2">
-                <i class="fa fa-tag mr-2 text-muted"></i>
-                <span class="text-muted">${topics.join(', ')}</span>
-              </div>` : ""
-            }
+            <div class="mr-3 d-flex align-items-center">
+                <i class="fa fa-clock-o mr-1"></i> ${duration}
+            </div>
           </div>
       `;
 };
