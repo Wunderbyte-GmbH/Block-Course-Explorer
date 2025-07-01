@@ -86,10 +86,10 @@ const courseCardFrontTemplate = (
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
 
     return `
-          <div class="position-relative">
+          <div class="position-relative card-header">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
           </div>
-          <div class="card-body bg-light">
+          <div class="card-body">
             <small class="text-uppercase text-muted">Material</small>
             <h5 class="card-title mt-1 font-weight-bold text-dark">${title}</h5>
             <p class="card-text mb-1"><strong>${senderName}</strong></p>
