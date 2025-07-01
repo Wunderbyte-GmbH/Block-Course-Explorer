@@ -96,7 +96,7 @@ const courseCardFrontTemplate = (
             </div>
         </div>
           <div class="card-body">
-            <small class="text-uppercase text-muted course-type">${courseType}</small>
+            <span class="course-type">${courseType}</span>
             <h2 class="course-title">${title}</h5>
             <p class="card-text mb-1"><strong>${senderName}</strong></p>
 
