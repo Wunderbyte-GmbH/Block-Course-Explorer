@@ -89,7 +89,7 @@ const courseCardFrontTemplate = (
     topics = topics?.map(topic => topic.value);
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
 
-    return $(`
+    return `
         <div class="card shadow-sm rounded" style="width: 20rem;">
           <div class="position-relative">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
@@ -118,7 +118,7 @@ const courseCardFrontTemplate = (
             }
           </div>
         </div>
-      `);
+      `;
 };
 
 const getRating = (score, reviewsnum) => {
