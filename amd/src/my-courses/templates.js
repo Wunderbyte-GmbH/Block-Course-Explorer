@@ -4,11 +4,7 @@ import $ from "jquery";
 export const courseCardTemplate = (values) => {
   const elementDefinition = `
   <div class="card course-card ${values.userEnrolled ? 'to-course' : 'enrol-into-course'}" data-id="${values.id}" tabindex="0">
-    <div class="card-content">
-    <div class="card-front">
       ${courseCardFrontTemplate(values)}
-    </div>
-    </div>
   </div>`;
   const element = $(elementDefinition);
 
@@ -90,7 +86,6 @@ const courseCardFrontTemplate = (
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
 
     return `
-        <div class="card shadow-sm rounded" style="width: 20rem;">
           <div class="position-relative">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
           </div>
@@ -117,7 +112,6 @@ const courseCardFrontTemplate = (
               </div>` : ""
             }
           </div>
-        </div>
       `;
 };
 
