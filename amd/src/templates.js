@@ -91,7 +91,39 @@ const courseCardFrontTemplate = (
     const courseType = mc_moodle_format;
     const duration = mc_moodle_kursdauer;
     const topics = mc_moodle_themen?.map(topic => topic.value);
-
+    return $(`
+        <div class="card shadow-sm rounded" style="width: 20rem;">
+          <div class="position-relative">
+            ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
+            <span class="badge badge-light position-absolute" style="top: 0.5rem; left: 0.5rem;">ko-kreativ</span>
+            ${mcoriginal ? `<span class="badge badge-warning font-weight-bold position-absolute" style="top: 0.5rem; right: 0.5rem;">MC-Original</span>` : ""}
+          </div>
+          <div class="card-body bg-light">
+            <small class="text-uppercase text-muted">Material</small>
+            <h5 class="card-title mt-1 font-weight-bold text-dark">${title}</h5>
+            <p class="card-text mb-1"><strong>${senderName}</strong></p>
+            <div class="d-flex flex-wrap text-muted mb-2 small">
+              <div class="mr-3 d-flex align-items-center">
+                <i class="fa fa-graduation-cap mr-1"></i> ${courseType}
+              </div>
+              <div class="mr-3 d-flex align-items-center">
+                <i class="fa fa-clock-o mr-1"></i> ${duration}
+              </div>
+              <div class="d-flex align-items-center">
+                ${getRating(score, reviewsnum)}
+              </div>
+            </div>
+            <p class="card-text">${courseCardDescription}</p>
+            ${topics?.length > 0 ? `
+              <div class="d-flex align-items-center mt-2">
+                <i class="fa fa-tag mr-2 text-muted"></i>
+                <span class="text-muted">${topics.join(', ')}</span>
+              </div>` : ""
+            }
+          </div>
+        </div>
+      `);
+      
     return $(`
     <div class="card-front">
         <div class="course-card__image">
