@@ -640,6 +640,7 @@
     border: none;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #cebMainContainer .card-header {
@@ -665,5 +666,5 @@
     font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
 }
 #cebMainContainer p.sender {
-    font-size: (1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
 }
