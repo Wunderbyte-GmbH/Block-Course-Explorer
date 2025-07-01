@@ -91,6 +91,7 @@ const courseCardFrontTemplate = (
     const courseType = mc_moodle_format;
     const duration = mc_moodle_kursdauer;
     const topics = mc_moodle_themen?.map(topic => topic.value);
+    console.log("test");
     return $(`
         <div class="card shadow-sm rounded" style="width: 20rem;">
           <div class="position-relative">
@@ -123,49 +124,6 @@ const courseCardFrontTemplate = (
           </div>
         </div>
       `);
-      
-    return $(`
-    <div class="card-front">
-        <div class="course-card__image">
-           ${image ?
-        "<img src=\"" + image + "\" alt=\"\">" : "<img src=\"https://picsum.photos/2124\" alt=\"\">"}
-        </div>
-        <div class="course-card__background"></div>
-        
-        ${mcoriginal ? "<div class=\"course-card__label mc-original\">MINT-Campus-Original</div>" : ""}
-        
-        <div class="course-card__content">
-            <small class="course-card__sender-name">${senderName}</small>
-            <h3 class="course-card__title">
-                ${title}        
-            </h3>
-            <div class="course-card__quick-facts d-sm-flex justify-content-between flex-wrap">
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-graduation-cap mr-1"></i>
-                    <span>${courseType}</span>
-                </div>
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-clock-o mr-1"></i>
-                    <span>${duration}</span>
-                </div>
-                <div class="d-flex align-items-center">
-                    ${getRating(score, reviewsnum)}
-                </div>
-            </div>
-            <p class="course-card__description">
-                ${courseCardDescription}
-            </p>
-            ${topics?.length > 0 ?
-                `<div class="course-card__tags d-flex">
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-tag"></i>
-                    </div>
-                    <div>${topics.join(', ')}</div>
-                </div>` :
-                ""
-            }
-        </div>
-    </div>`);
 };
 
 const getRating = (score, reviewsnum) => {
