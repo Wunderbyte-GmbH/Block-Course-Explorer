@@ -92,7 +92,7 @@ const courseCardFrontTemplate = (
         </div>
           <div class="card-body">
             <small class="text-uppercase text-muted">${courseType}</small>
-            <h5 class="card-title mt-1 font-weight-bold text-dark">${title}</h5>
+            <h5 class="course-title">${title}</h5>
             <p class="card-text mb-1"><strong>${senderName}</strong></p>
             <div class="d-flex flex-wrap text-muted mb-2 small">
               <div class="mr-3 d-flex align-items-center">
