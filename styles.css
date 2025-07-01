@@ -623,11 +623,11 @@
     color: rgb(85, 28, 119);
 }
 
-#cebMainContainer h2 {
-    margin-top:0.2rem;
-    margin-bottom:0.2rem;
+#cebMainContainer .card h2.course-title  {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
-  
+
 #cebMainContainer .card-body {
     margin-top: 0;
     margin-bottom: 0;
@@ -637,11 +637,11 @@
     padding-left: 0.6rem;
     border: none;
 }
-  
+
 #cebMainContainer .card-header {
     border: none !important;
 }
-  
+
 #cebMainContainer .course-type {
     font-size: 0.8rem;
     font-style: normal;
@@ -649,4 +649,8 @@
     letter-spacing: 0.025rem;
     text-transform: uppercase;
     color: #f5698f;
+}
+#cebMainContainer .course-type {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
