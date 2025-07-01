@@ -606,5 +606,19 @@
 }
   
 #cebMainContainer .course-card .card-body {
+}
+
+#cebMainContainer .course-card {
     background: rgb(240, 233, 229);
+}
+  
+.card-header {
+    border: none;
+}
+
+#cebMainContainer h2.course-title {
+    font-weight: 700;
+    margin-top: 1.25rem;margin-bottom: 1.25rem;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
+    color: rgb(85, 28, 119);
 }

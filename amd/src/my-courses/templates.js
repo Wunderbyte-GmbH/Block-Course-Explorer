@@ -88,7 +88,7 @@ const courseCardFrontTemplate = (
     return `
           <div class="position-relative card-header p-0">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
-            ${MCOriginal ? "<div class=\"course-card__label mc-original\">MINT-Campus-Original</div>" : ""}
+            ${MCOriginal ? "<div class=\"course-card__label mc-original\">MC-Original</div>" : ""}
         </div>
           <div class="card-body">
             <small class="text-uppercase text-muted">${courseType}</small>
