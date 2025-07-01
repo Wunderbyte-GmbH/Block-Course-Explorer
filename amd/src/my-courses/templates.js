@@ -110,10 +110,11 @@ const courseCardFrontTemplate = (
             </div>
         </div>
           <div class="card-body">
-            <span class="course-type">${courseType}</span>
-            <h2 class="course-title">${title}</h5>
-            <p class="card-text mb-1 sender">${senderName}</p>
-
+            <div>
+                <span class="course-type">${courseType}</span>
+                <h2 class="course-title">${title}</h5>
+                <p class="card-text mb-1 sender">${senderName}</p>
+            </div>
             <div class="mr-3 d-flex align-items-center duration">
                     ${svgClockIcon}
                     <div>${duration}</div>
