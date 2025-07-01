@@ -89,49 +89,38 @@ const courseCardFrontTemplate = (
     topics = topics?.map(topic => topic.value);
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
 
-    return `
-    <div class="course-card__image">
-       ${image ?
-          "<img src=\"" + image + "\" alt=\"\">" : "<img src=\"https://picsum.photos/2124\" alt=\"\">"}
-    </div>
-    <div class="course-card__background"></div>
-    
-    ${MCOriginal ? "<div class=\"course-card__label mc-original\">MINT-Campus-Original</div>" : ""}
-    <div class="course-card__label favourite">
-        <img src="/blocks/course_explorer/resources/images/${heartIconName}" alt="${heartIconName}">
-    </div>
-   
-    
-    <div class="course-card__content">
-        <small class="course-card__sender-name">${senderName ?? ''}</small>
-        <h3 class="course-card__title">
-            ${title}        
-        </h3>
-        <div class="course-card__quick-facts d-sm-flex justify-content-between flex-wrap">
-            <div class="d-flex align-items-center">
-                <i class="fa fa-graduation-cap mr-1"></i>
-                <span>${courseType ?? ''}</span>
-            </div>
-            <div class="d-flex align-items-center">
-                <i class="fa fa-clock-o mr-1"></i>
-                <span>${duration ?? ''}</span>
-            </div>
-            <div class="d-flex align-items-center">
+    console.log("test");
+    return $(`
+        <div class="card shadow-sm rounded" style="width: 20rem;">
+          <div class="position-relative">
+            ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
+            ${mcoriginal ? `<span class="badge badge-warning font-weight-bold position-absolute" style="top: 0.5rem; right: 0.5rem;">MC-Original</span>` : ""}
+          </div>
+          <div class="card-body bg-light">
+            <small class="text-uppercase text-muted">Material</small>
+            <h5 class="card-title mt-1 font-weight-bold text-dark">${title}</h5>
+            <p class="card-text mb-1"><strong>${senderName}</strong></p>
+            <div class="d-flex flex-wrap text-muted mb-2 small">
+              <div class="mr-3 d-flex align-items-center">
+                <i class="fa fa-graduation-cap mr-1"></i> ${courseType}
+              </div>
+              <div class="mr-3 d-flex align-items-center">
+                <i class="fa fa-clock-o mr-1"></i> ${duration}
+              </div>
+              <div class="d-flex align-items-center">
                 ${getRating(score, reviewsnum)}
+              </div>
             </div>
+            <p class="card-text">${courseCardDescription}</p>
+            ${topics?.length > 0 ? `
+              <div class="d-flex align-items-center mt-2">
+                <i class="fa fa-tag mr-2 text-muted"></i>
+                <span class="text-muted">${topics.join(', ')}</span>
+              </div>` : ""
+            }
+          </div>
         </div>
-        <p class="course-card__description">
-            ${courseCardDescription}
-        </p>
-        ${topics?.length > 0 ?
-        `<div class="course-card__tags d-flex">
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-tag"></i>
-                </div>
-                <div>${topics.join(', ')}</div>
-            </div>` :
-        ""}
-    </div>`;
+      `);
 };
 
 const getRating = (score, reviewsnum) => {
