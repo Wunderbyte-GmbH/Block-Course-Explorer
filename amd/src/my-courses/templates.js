@@ -90,12 +90,12 @@ const courseCardFrontTemplate = (
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
           </div>
           <div class="card-body">
-            <small class="text-uppercase text-muted">Material</small>
+            <small class="text-uppercase text-muted">${courseType}</small>
             <h5 class="card-title mt-1 font-weight-bold text-dark">${title}</h5>
             <p class="card-text mb-1"><strong>${senderName}</strong></p>
             <div class="d-flex flex-wrap text-muted mb-2 small">
               <div class="mr-3 d-flex align-items-center">
-                <i class="fa fa-graduation-cap mr-1"></i> ${courseType}
+                <i class="fa fa-graduation-cap mr-1"></i> 
               </div>
               <div class="mr-3 d-flex align-items-center">
                 <i class="fa fa-clock-o mr-1"></i> ${duration}
