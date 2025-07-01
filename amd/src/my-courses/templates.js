@@ -84,7 +84,21 @@ const courseCardFrontTemplate = (
 
     topics = topics?.map(topic => topic.value);
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
-
+    const svgClockIcon = `
+    <div class="icon-container" style="height: 20px; width: 20px; transform: rotate(0deg) scaleX(1) scaleY(1);">
+      <svg xmlns="http://www.w3.org/2000/svg" width="128" height="140" viewBox="0 0 128 140" style="max-width: 100%; max-height: 100%;">
+        <g id="Icons">
+          <g id="Pulpo">
+            <path id="Uhr" d="M64,26.55c-27.62,0-50,22.38-50,50s22.38,50,50,50,50-22.38,50-50-22.38-50-50-50Zm18.65,63.1l-4.03,5.04
+              c-.26.33-.59.61-.96.81-.37.2-.78.33-1.2.38-.42.05-.85.01-1.25-.11-.41-.12-.79-.31-1.12-.58l-13.51-10.02
+              c-.94-.76-1.71-1.71-2.23-2.8-.52-1.09-.79-2.28-.79-3.49v-31.36c0-.86.34-1.68.94-2.28.6-.6,1.43-.94,2.28-.94h6.45
+              c.86,0,1.68.34,2.28.94.6.6.94,1.43.94,2.28v29.03l11.69,8.57c.33.26.61.59.81.96s.33.78.38,1.2c.05.42,0,.85-.11,1.25
+              -.12.41-.32.79-.58,1.12Z" fill="#551c77"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  `;  
     return `
           <div class="position-relative card-header p-0">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
@@ -98,10 +112,11 @@ const courseCardFrontTemplate = (
           <div class="card-body">
             <span class="course-type">${courseType}</span>
             <h2 class="course-title">${title}</h5>
-            <p class="card-text mb-1"><strong>${senderName}</strong></p>
+            <p class="card-text mb-1 sender">${senderName}</p>
 
             <div class="mr-3 d-flex align-items-center duration">
-                <i class="fa fa-clock-o mr-1"></i> ${duration}
+                    ${svgClockIcon}
+                    ${duration}
             </div>
           </div>
       `;
