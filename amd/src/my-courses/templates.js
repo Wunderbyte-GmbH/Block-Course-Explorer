@@ -85,7 +85,7 @@ const courseCardFrontTemplate = (
     topics = topics?.map(topic => topic.value);
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
     const svgClockIcon = `
-    <div class="icon-container" style="height: 20px; width: 20px; transform: rotate(0deg) scaleX(1) scaleY(1);">
+    <div class="icon-container d-flex justify-content-center align-items-center" style="height: 20px; width: 20px; transform: rotate(0deg) scaleX(1) scaleY(1);">
       <svg xmlns="http://www.w3.org/2000/svg" width="128" height="140" viewBox="0 0 128 140" style="max-width: 100%; max-height: 100%;">
         <g id="Icons">
           <g id="Pulpo">
@@ -98,7 +98,7 @@ const courseCardFrontTemplate = (
         </g>
       </svg>
     </div>
-  `;  
+  `;
     return `
           <div class="position-relative card-header p-0">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
@@ -116,7 +116,7 @@ const courseCardFrontTemplate = (
 
             <div class="mr-3 d-flex align-items-center duration">
                     ${svgClockIcon}
-                    ${duration}
+                    <div>${duration}</div>
             </div>
           </div>
       `;
