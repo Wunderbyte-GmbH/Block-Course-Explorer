@@ -87,6 +87,7 @@ const courseCardFrontTemplate = (
     title = truncateString(title, 100);
     let courseCardDescription = getDesc(description);
     courseCardDescription = truncateString(courseCardDescription, 150);
+    console.log("test");
 
     const courseType = mc_moodle_format;
     const duration = mc_moodle_kursdauer;
@@ -96,7 +97,6 @@ const courseCardFrontTemplate = (
         <div class="card shadow-sm rounded" style="width: 20rem;">
           <div class="position-relative">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
-            <span class="badge badge-light position-absolute" style="top: 0.5rem; left: 0.5rem;">ko-kreativ</span>
             ${mcoriginal ? `<span class="badge badge-warning font-weight-bold position-absolute" style="top: 0.5rem; right: 0.5rem;">MC-Original</span>` : ""}
           </div>
           <div class="card-body bg-light">
