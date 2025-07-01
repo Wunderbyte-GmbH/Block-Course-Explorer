@@ -89,21 +89,18 @@ const courseCardFrontTemplate = (
           <div class="position-relative card-header p-0">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
             ${MCOriginal ? "<div class=\"course-card__label mc-original\">MC-Original</div>" : ""}
-        </div>
-          <div class="card-body">
-            <small class="text-uppercase text-muted">${courseType}</small>
-            <h5 class="course-title">${title}</h5>
-            <p class="card-text mb-1"><strong>${senderName}</strong></p>
-            <div class="d-flex flex-wrap text-muted mb-2 small">
-              <div class="mr-3 d-flex align-items-center">
-                <i class="fa fa-graduation-cap mr-1"></i> 
-              </div>
-
+            <div class="d-flex flex-wrap text-muted mb-2 small rating">
               <div class="d-flex align-items-center">
                 ${getRating(score, reviewsnum)}
               </div>
             </div>
-            <div class="mr-3 d-flex align-items-center">
+        </div>
+          <div class="card-body">
+            <small class="text-uppercase text-muted course-type">${courseType}</small>
+            <h2 class="course-title">${title}</h5>
+            <p class="card-text mb-1"><strong>${senderName}</strong></p>
+
+            <div class="mr-3 d-flex align-items-center duration">
                 <i class="fa fa-clock-o mr-1"></i> ${duration}
             </div>
           </div>

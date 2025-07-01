@@ -611,9 +611,9 @@
 #cebMainContainer .course-card {
     background: rgb(240, 233, 229);
 }
-  
-.card-header {
-    border: none;
+
+#cebMainContainer .card-header {
+    border: none !important;
 }
 
 #cebMainContainer h2.course-title {
