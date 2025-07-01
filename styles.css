@@ -121,11 +121,13 @@
     position: absolute;
     top: 20px;
     right: 15px;
-    background-color: #ebff03;
-    padding: 4px 5px;
-    border-radius: 3px;
-    font-size: 10px;
+    font-size: 0.8rem;
     z-index: 2;
+    background-color: #EBFF03;
+    padding: .2em 1rem .2em 1rem;
+    border-radius: 100px;
+    color: #551c77;
+    font-weight: 700;
 }
 .course-card__label.favourite {
     position: absolute;
@@ -623,7 +625,7 @@
     color: rgb(85, 28, 119);
 }
 
-#cebMainContainer .card h2.course-title  {
+#cebMainContainer .card h2.course-title {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
 }
@@ -660,4 +662,8 @@
 #cebMainContainer .duration {
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
+}
+#cebMainContainer p.sender {
+    font-size: (1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
 }
