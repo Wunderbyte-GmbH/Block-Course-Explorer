@@ -587,7 +587,7 @@
     min-height: unset;
 }
   
-#cebMainContainer .course-card .card-img-top, .theme-card .card-img-top {
+#cebMainContainer .course-card .card-img-top {
     background-position: center;
     background-size: contain;
     border: none;
