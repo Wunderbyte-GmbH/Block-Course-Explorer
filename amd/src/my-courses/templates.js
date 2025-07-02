@@ -103,6 +103,9 @@ const courseCardFrontTemplate = (
           <div class="position-relative card-header p-0">
             ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
             ${MCOriginal ? "<div class=\"course-card__label mc-original\">MC-Original</div>" : ""}
+            <div class="mat-card__label favourite">
+                <img src="/blocks/course_explorer/resources/images/${heartIconName}" alt="${heartIconName}">
+            </div>
             <div class="d-flex flex-wrap text-muted mb-2 small rating">
               <div class="d-flex align-items-center">
                 ${getRating(score, reviewsnum)}
