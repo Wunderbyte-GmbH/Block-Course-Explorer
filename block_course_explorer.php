@@ -40,7 +40,7 @@ class block_course_explorer extends block_base {
 // $this->resources['translations'] = get_string_manager()->load_component_strings($component, current_language());
         $this->resources['wsToken'] = get_config('block_course_explorer', 'ws_token');
         $categoryids = $this->config->category_ids ?? '';
-        $this->resources['icon'] = $OUTPUT->image_url('ico-section-fortschritte', 'block_mycertificates')->out(false);
+        $this->resources['icon'] = $OUTPUT->image_url('ico-section-fortschritte', 'block_course_explorer')->out(false);
         $this->resources['categoryids'] = $categoryids;
         $this->resources['userid'] = $USER->id;
         $this->resources['instanceId'] = uniqid();
